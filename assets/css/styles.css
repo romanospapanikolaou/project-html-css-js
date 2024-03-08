@@ -1,0 +1,466 @@
+/* ----- ANTA FONT Link ----- */
+
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+
+/* ----- ROOT COLORS ----- */
+
+:root {
+  --body-color: #f8f9fa;
+  --color-white: #ffffff;
+
+  --text-color-second: #000000;
+  --text-color-third: #ff922b;
+
+  --first-color: #1971c2;
+  --first-color-hover: #4dabf7;
+
+  --second-color: #74c0fc;
+  --third-color: #ffd43b;
+  --first-shadow-color: #282828;
+
+  a:visited {
+    text-decoration: none;
+    color: var(--text-color-second);
+  }
+  a:hover {
+    text-decoration: none;
+    color: var(--first-color-hover);
+  }
+  a:focus {
+    text-decoration: none;
+    color: var(--first-color);
+  }
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Anta", Arial, sans-serif;
+}
+
+/* ----- SMOOTH SCROLL ----- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----- CHANGE SCROLL BAR DESIGN ----- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f3f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #868e96;
+}
+
+/* ------- BASE -------- */
+
+body {
+  background: var(--body-color);
+}
+.container {
+  width: 100%;
+  position: relative;
+}
+
+/* ----- MAIN BOX ----- */
+.section {
+  height: 100vh;
+  padding: 20px;
+}
+.row {
+  display: block;
+  justify-content: space-between;
+  gap: 50px;
+}
+.col {
+  display: block;
+  gap: 50px;
+}
+
+/* ----- NAVIGATION BAR ----- */
+
+.navbar {
+  background-color: var(--body-color);
+  color: var(--text-color-second);
+  padding: 10px 0;
+  z-index: 1000; /* Ensure it's on top */
+  position: fixed;
+  width: 100%;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.nav-links a:visited {
+  text-decoration: none;
+  color: none;
+}
+
+.nav-links a:hover {
+  color: var(--first-color-hover);
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+}
+
+.nav-menu-btn {
+  display: none;
+}
+.nav-menu-btn i {
+  font-size: 32px;
+  cursor: pointer;
+}
+.active-link {
+  position: relative;
+  color: var(--first-color);
+  transition: 0.3;
+}
+.active-link::after {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background: var(--first-color);
+  border-radius: 50%;
+}
+
+.dropdown-content {
+  display: none;
+  text-align: center;
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 40px;
+  color: var(--text-color-second);
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: var(--first-color-hover);
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color-second);
+  margin: 5px;
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+/* ----- WRAPPER DESIGN ----- */
+.wrapper {
+  padding-inline: 10vw;
+  height: 120vh;
+}
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
+.btn {
+  font-weight: 500;
+  padding: 12px 24px;
+  background: #f1f3f5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: var(--second-color);
+  color: var(--color-white);
+}
+
+/* ----- FEATURED TEXT  ----- */
+.featured-text {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+}
+.featured-text-card span {
+  background: var(--third-color);
+  color: var(--color-white);
+  padding: 3px 8px;
+  font-size: 32px;
+  border-radius: 5px;
+}
+.featured-name {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--text-color-second);
+  margin-block: 0px;
+  padding-bottom: 10px;
+}
+.typedText {
+  color: var(--text-color-third);
+}
+.featured-text-info {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: var(--text-color-second);
+}
+
+.featured-text-btn a:visited {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.featured-text-btn {
+  display: flex;
+  gap: 20px;
+  color: var(--color-white);
+}
+.featured-text-btn > .blue-btn {
+  background: var(--first-color);
+  color: var(--color-white);
+  text-decoration: none;
+}
+.featured-text-btn > .blue-btn:hover {
+  background: var(--first-color-hover);
+  color: var(--color-white);
+}
+
+.featured-text-btn :visited {
+  color: var(--color-white);
+}
+
+.social_icons {
+  display: flex;
+  margin-top: 5em;
+  gap: 30px;
+}
+
+/* -- ## --- RESUABLE CSS -- ## -- */
+.top-header {
+  text-align: center;
+  margin-bottom: 5em;
+}
+.top-header h1 {
+  font-weight: 600;
+  color: var(--text-color-second);
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color-second);
+  margin-bottom: 15px;
+}
+
+/* ----- ABOUT / SKILLS BOX ----- */
+
+.about-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 30px 70px;
+  padding-inline: 20px;
+  width: 100%;
+  background: var(--color-white);
+  box-shadow: 0px 4px 10px 0px #00000054;
+  border-radius: 10px;
+}
+.about-info p {
+  text-align: center;
+  font-size: 20px;
+  color: #868e96;
+}
+.about-btn button {
+  position: center;
+  right: 20px;
+  bottom: 20px;
+  background: var(--first-color);
+  color: var(--color-white);
+  border-radius: 30px;
+}
+.about-btn button:hover {
+  background: var(--first-color-hover);
+}
+.skills-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 30px 70px;
+  padding-inline: 20px;
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 4px 10px 0px #00000054;
+}
+.skills-header {
+  margin-bottom: 5px;
+}
+.skills-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.skills-list span {
+  background: var(--first-color);
+  color: var(--color-white);
+  padding: 2px 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.skills-list img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ----- CONTACT BOX ----- */
+.contact-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  width: 100%;
+  height: 315px;
+  background: var(--first-color);
+  color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px #0000007c;
+}
+.contact-info > h2 {
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-white);
+  margin-block: 5px;
+  font-size: 20px;
+}
+.contact-info i {
+  font-size: 50px;
+}
+
+.contact-info a:hover {
+  color: var(--first-color-hover);
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+/* ----- FOOTER BOX ----- */
+footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 26px;
+  background: #f8f8f8;
+  padding-block: 30px 50px;
+  width: 100%;
+}
+.top-footer p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.middle-footer .footer-menu {
+  display: flex;
+}
+.footer_menu_list {
+  list-style: none;
+}
+.footer_menu_list a {
+  text-decoration: none;
+  font-weight: 500;
+  margin-inline: 20px;
+}
+.footer-social-icons {
+  display: flex;
+  gap: 30px;
+}
+.bottom-footer {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px 0px #0000007c;
+  cursor: pointer;
+}
+
+.footer-menu a:hover {
+  color: var(--first-color-hover);
+}
+
+.icon:hover {
+  color: var(--first-color-hover);
+  box-shadow: 0px 4px 10px 0px #00000054;
+}
+.bottom-footer a:hover {
+  color: var(--first-color-hover);
+}
